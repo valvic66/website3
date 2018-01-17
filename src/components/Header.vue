@@ -3,7 +3,7 @@
     <div class="header-container-desktop row">
       <div class="col-md-3 header-logo">
         <div class="header-logo-img">
-          <img src="https://image.freepik.com/free-icon/apple-logo_318-40184.jpg" alt="" width="50">
+          <img src="https://image.freepik.com/free-icon/apple-logo_318-40184.jpg" alt="">
         </div>
         <div class="header-logo-title">Apple</div>
       </div>
@@ -20,9 +20,9 @@
     <div class="header-container-mobile row">
       <div class="header-logo">
         <div class="header-logo-img">
-          <img src="https://image.freepik.com/free-icon/apple-logo_318-40184.jpg" alt="" width="60">
+          <img src="https://image.freepik.com/free-icon/apple-logo_318-40184.jpg" alt="">
         </div>
-        <div class="header-logo-title">Apple</div>
+        <div class="header-logo-title">APPLE</div>
       </div>
       <div @click='onHamburgerClick' class="header-sandwich icon-menu" />
     </div>
@@ -201,9 +201,13 @@ export default {
     align-items: center;
     .header-logo-img {
       margin-left: 1em;
+     img {
+      width: 60px;
+      height: 60px;
+     }
     }
     .header-logo-title {
-      font-size: 20px;
+      font-size: 1.6em;
       font-weight: 700;
       color: #1a2328;
       text-transform: uppercase;
@@ -277,23 +281,26 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  .header-logo {
-    margin-left: 2em;
-  }
   .header-sandwich {
     font-size: 1.8em;
-    margin-right: 1em;
+    margin-right: .6em;
+    padding: .5em;
     &:hover {
       cursor: pointer;
     }
   }
   .header-logo {
+    margin-left: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     img {
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
     }
     .header-logo-title {
-      font-size: .9em;
+      font-size: 1.4em;
     }
   }
 }
@@ -305,11 +312,11 @@ export default {
 
   display: flex;
   flex-direction: column;
-  padding-top: .5em;
+  padding-top: .6em;
 
   .submenu-upper {
     width: 100%;
-    height: 16em;
+    height: 15em;
 
     display: flex;
     flex-direction: row;
@@ -321,7 +328,7 @@ export default {
       justify-content: space-around;
       .header-menu-item {
         cursor: pointer;
-        font-size: 15px;
+        font-size: 1em;
         font-weight: 900;
         color: #1a2328;
         text-transform: uppercase;
@@ -363,7 +370,7 @@ export default {
       .header-menu-item {
         cursor: pointer;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 13px;
+        font-size: .9em;
         font-weight: 350;
         color: #1a2328;
         &:hover {
@@ -385,7 +392,7 @@ export default {
     padding-top: 1em;
     padding-left: 1.2em;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: .9em;
     color: #a0a8be;
     .contact-title {
       font-weight: 700;
