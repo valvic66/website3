@@ -3,12 +3,12 @@
     <div class="header-container-desktop row">
       <div class="col-md-3 header-logo">
         <div class="header-logo-img">
-          <img src="https://image.freepik.com/free-icon/apple-logo_318-40184.jpg" alt="">
+          <img src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt="">
         </div>
-        <div class="header-logo-title">Apple</div>
+        <div class="header-logo-title">FRONTEND DEV</div>
       </div>
       <div class="col-md-9 header-menu">
-        <div class="header-menu-item">HOW IT WORKS</div>
+        <div class="header-menu-item">HOW WE WORK</div>
         <div class="header-menu-item">WHO WE ARE</div>
         <div class="header-menu-item">SHOW CASE</div>
         <div class="header-menu-item">WHY US</div>
@@ -17,20 +17,20 @@
       </div>
     </div>
 
-    <div class="header-container-mobile row">
+    <div v-bind:class='{isGrey: isHamburgerClicked}' class="header-container-mobile">
       <div class="header-logo">
         <div class="header-logo-img">
-          <img src="https://image.freepik.com/free-icon/apple-logo_318-40184.jpg" alt="">
+          <img src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt="">
         </div>
-        <div class="header-logo-title">APPLE</div>
+        <div class="header-logo-title">FRONTEND DEV</div>
       </div>
       <div @click='onHamburgerClick' class="header-sandwich icon-menu" />
     </div>
 
-    <div v-if='isHamburgerClicked' class="submenu row col-md-12">
+    <div v-if='isHamburgerClicked' class="submenu">
       <div class="submenu-upper">
         <div class="submenu-left">
-          <div class="header-menu-item">HOW IT WORKS</div>
+          <div class="header-menu-item">HOW WE WORK</div>
           <div class="header-menu-item">WHO WE ARE</div>
           <div class="header-menu-item">SHOW CASE</div>
           <div class="header-menu-item">WHY US</div>
@@ -53,24 +53,56 @@
       <div class="submenu-lower">
         <div class="contact-title">CONTACT</div>
 
-        <div class="contact-skype isFlex">
+        <div class="contact-skype isFlexStart">
           <div class="icon-brand10" />
           <div class="submenu-lower-item">micuvalentin3</div>
         </div>
 
-        <div class="contact-skype isFlex">
+        <div class="contact-skype isFlexStart">
           <div class="icon-brand5" />
           <div class="submenu-lower-item">valvic6@gmail.com</div>
         </div>
 
-        <div class="contact-skype isFlex">
+        <div class="contact-skype isFlexStart">
           <div class="icon-brand2" />
           <div class="submenu-lower-item">Constanta, Romania</div>
         </div>
       </div>
     </div>
 
-    <div>Collapsed text</div>
+    <div class='howwework'>
+      <div class="howwework-title">Correct steps to follow in <br />Frontend Development</div>
+      <div class="howwework-text">We will follow the above steps <b>carefully</b> in order to make sure that <b>your project will be perfect</b> to represent your bussines. </div>
+      <div class="howwework-req">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
+            <div class="req-icon icon-check" />
+            <div class="req-item">Communication</div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
+            <div class="req-icon icon-check-circle" />
+            <div class="req-item">Analyse Layout</div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
+            <div class="req-icon icon-check-square" />
+            <div class="req-item">Identify Components</div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
+            <div class="req-icon icon-check" />
+            <div class="req-item">Shape UI Appearance</div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
+            <div class="req-icon icon-check-circle" />
+            <div class="req-item">Integration</div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
+            <div class="req-icon icon-check-square" />
+            <div class="req-item">Create Style Guide</div>
+          </div>
+        </div>
+      </div>
+      <div class="howwework-button">SEE OUR OFFERS</div>
+    </div>
 
   </div>
 </template>
@@ -117,6 +149,24 @@ export default {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-check:before {
+  content: "\e90d";
+}
+.icon-check-circle:before {
+  content: "\e90c";
+}
+.icon-check-square:before {
+  content: "\e90e";
+}
+.icon-menu:before {
+  content: "\e5d2";
+}
+.icon-more_horiz:before {
+  content: "\e5d3";
+}
+.icon-reorder:before {
+  content: "\e8fe";
 }
 .icon-brand:before {
   content: "\e900";
@@ -165,15 +215,6 @@ export default {
   content: "\e90b";
   color: #1da1f2;
 }
-.icon-menu:before {
-  content: "\e5d2";
-}
-.icon-more_horiz:before {
-  content: "\e5d3";
-}
-.icon-reorder:before {
-  content: "\e8fe";
-}
 
 .bc1 {
   background-color: $bc1;
@@ -182,17 +223,24 @@ export default {
   background-color: $bc2;
 }
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .header-container-desktop {
-  display: none;
-  .header-logo {
-    animation-name: logo_slide;
+    animation-name: header_slide;
     animation-duration: .3s;
     animation-fill-mode: both;
+
+  display: none;
+  .header-logo {
 
     cursor: pointer;
     display: flex;
@@ -202,22 +250,20 @@ export default {
     .header-logo-img {
       margin-left: 1em;
      img {
-      width: 60px;
-      height: 60px;
+      width: 150px;
+      height: 70px;
      }
     }
     .header-logo-title {
-      font-size: 1.6em;
-      font-weight: 700;
+      font-size: 1.2em;
+      font-weight: 600;
+      letter-spacing: -2px;
       color: #1a2328;
       text-transform: uppercase;
+      padding-left: .5em;
     }
   }
   .header-menu {
-    animation-name: header_slide;
-    animation-duration: .3s;
-    animation-fill-mode: both;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -281,9 +327,10 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   .header-sandwich {
     font-size: 1.8em;
-    margin-right: .6em;
+    margin-right: .5em;
     padding: .5em;
     &:hover {
       cursor: pointer;
@@ -296,19 +343,24 @@ export default {
     justify-content: space-between;
     align-items: center;
     img {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 60px;
     }
     .header-logo-title {
-      font-size: 1.4em;
+      font-size: 1.2em;
+      letter-spacing: -2px;
+      padding-left: .5em;
     }
   }
 }
+.isGrey {
+  background-color: #f5f7fa;
+}
 
 .submenu {
-  animation-name: submenu_slide;
-  animation-duration: .3s;
-  animation-fill-mode: both;
+  background-color: #f5f7fa;
+
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -367,6 +419,7 @@ export default {
       flex-direction: column;
       justify-content: space-around;
       text-align: right;
+      padding-right: 1em;
       .header-menu-item {
         cursor: pointer;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -407,7 +460,7 @@ export default {
         color: #02b875;
       }
     }
-    .isFlex {
+    .isFlexStart {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -415,6 +468,92 @@ export default {
     }
   }
 }
+
+.howwework {
+  max-width: 100%;
+  margin: 1em;
+  .howwework-title {
+    // background-color: lightblue;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4em;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    color: #1a2328;
+    max-width: 14em;
+    margin-bottom: 1em;
+  }
+  .howwework-text {
+    transform: scaleY(.9);
+    line-height: 1.2em;
+    max-width: 45em;
+  }
+  .howwework-req {
+    margin: 1em 0;
+    .req-item {
+      font-size: 1.2em;
+    }
+    .req-icon {
+      padding-right: .2em;
+      font-size: 1.2em;
+      color: #02b875;
+    }
+  }
+  .howwework-button {
+    // margin: 0 auto;
+    background-color: #02b875;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    max-width: 12em;
+    margin-top: 2em;
+    &:hover {
+      color: white;
+      background-color: #1a2328;
+      cursor: pointer;
+      -webkit-transition: background-color .3s ease-in-out;
+      -moz-transition: background-color .3s ease-in-out;
+      -o-transition: background-color .3s ease-in-out;
+      transition: background-color .3s ease-in-out;
+    }
+  }
+}
+.isFlexCenter {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 576px) {
+  .howwework {
+    margin: 1em;
+    .howwework-title {
+    font-size: 1.4em;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    }
+    .howwework-req {
+      margin: 1.2em 0;
+      .req-item {
+        font-size: 1.2em;
+      }
+      .req-icon {
+        padding-right: .2em;
+        font-size: 1.2em;
+      }
+    }
+    .howwework-button {
+      padding: 1.2em 0;
+      max-width: 12em; 
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {}
 
 @media screen and (min-width: 990px) {
   .header-container-desktop {
@@ -432,18 +571,32 @@ export default {
   .submenu {
     display: none;
   }
+
+  .howwework {
+    .howwework-title {
+    font-size: 2.3em;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    }
+    .howwework-req {
+      margin: 1.8em 0;
+      .req-item {
+        font-size: 1.6em;
+      }
+      .req-icon {
+        padding-right: .2em;
+        font-size: 1.4em;
+      }
+    }
+    .howwework-button {
+      padding: 1.6em 0;
+      max-width: 16em; 
+    }
+  }
 }
 
 @keyframes header_slide {
     from {transform: translateY(-100px);}
-    to {transform: translateY(0);}
-}
-@keyframes logo_slide {
-    from {transform: translateX(-100px);}
-    to {transform: translateX(0);}
-}
-@keyframes submenu_slide {
-    from {transform: translateY(-50px);}
     to {transform: translateY(0);}
 }
 </style>
