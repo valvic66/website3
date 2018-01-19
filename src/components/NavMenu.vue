@@ -1,15 +1,17 @@
 <template>
-  <div class="wrapper">
+  <div class="header-container">
     <div class="header-container-desktop row">
-      <div class="col-md-3 header-logo">
-        <div class="header-logo-img">
-          <img src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt="">
+
+        <div class="col-md-4 header-logo">
+          <div class="header-logo-img">
+            <router-link to="/"><img src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt=""></router-link>
+          </div>
+          <router-link class="header-logo-title" to="/"><div>FRONTEND DEV</div></router-link>
         </div>
-        <div class="header-logo-title">FRONTEND DEV</div>
-      </div>
-      <div class="col-md-9 header-menu">
-        <div class="header-menu-item">HOW WE WORK</div>
-        <div class="header-menu-item">WHO WE ARE</div>
+
+      <div class="col-md-8 header-menu">
+        <router-link class="header-menu-item" to="/howwework"><div>HOW WE WORK</div></router-link>
+        <router-link class="header-menu-item" to="/whoweare"><div>WHO WE ARE</div></router-link>
         <div class="header-menu-item">SHOW CASE</div>
         <div class="header-menu-item">WHY US</div>
         <div class="header-menu-item header-menu-item-btn">START A PROJECT</div>
@@ -20,9 +22,9 @@
     <div v-bind:class='{isGrey: isHamburgerClicked}' class="header-container-mobile">
       <div class="header-logo">
         <div class="header-logo-img">
-          <img src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt="">
+          <router-link to="/"><img src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt=""></router-link>
         </div>
-        <div class="header-logo-title">FRONTEND DEV</div>
+        <router-link class="header-logo-title" to="/"><div>FRONTEND DEV</div></router-link>
       </div>
       <div @click='onHamburgerClick' class="header-sandwich icon-menu" />
     </div>
@@ -30,8 +32,8 @@
     <div v-if='isHamburgerClicked' class="submenu">
       <div class="submenu-upper">
         <div class="submenu-left">
-          <div class="header-menu-item">HOW WE WORK</div>
-          <div class="header-menu-item">WHO WE ARE</div>
+          <router-link class="header-menu-item" to="/howwework"><div @click='onHamburgerClick'>HOW WE WORK</div></router-link>
+          <router-link class="header-menu-item" to="/whoweare"><div @click='onHamburgerClick'>WHO WE ARE</div></router-link>
           <div class="header-menu-item">SHOW CASE</div>
           <div class="header-menu-item">WHY US</div>
           <div class="header-menu-item header-menu-item-btn">START A PROJECT</div>
@@ -69,47 +71,12 @@
         </div>
       </div>
     </div>
-
-    <div class='howwework'>
-      <div class="howwework-title">Correct steps to follow in <br />Frontend Development</div>
-      <div class="howwework-text">We will follow the above steps <b>carefully</b> in order to make sure that <b>your project will be perfect</b> to represent your bussines. </div>
-      <div class="howwework-req">
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
-            <div class="req-icon icon-check" />
-            <div class="req-item">Communication</div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
-            <div class="req-icon icon-check-circle" />
-            <div class="req-item">Analyse Layout</div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
-            <div class="req-icon icon-check-square" />
-            <div class="req-item">Identify Components</div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
-            <div class="req-icon icon-check" />
-            <div class="req-item">Shape UI Appearance</div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
-            <div class="req-icon icon-check-circle" />
-            <div class="req-item">Integration</div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
-            <div class="req-icon icon-check-square" />
-            <div class="req-item">Create Style Guide</div>
-          </div>
-        </div>
-      </div>
-      <div class="howwework-button">SEE OUR OFFERS</div>
-    </div>
-
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Header',
+  name: 'NavMenu',
   props: [''],
   data () {
     return {
@@ -127,121 +94,19 @@ export default {
 <style scoped lang='scss'>
 @import '../styles/custom-bootstrap.scss';
 
-@font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?4p5d2l');
-  src:  url('fonts/icomoon.eot?4p5d2l#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?4p5d2l') format('truetype'),
-    url('fonts/icomoon.woff?4p5d2l') format('woff'),
-    url('fonts/icomoon.svg?4p5d2l#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.icon-check:before {
-  content: "\e90d";
-}
-.icon-check-circle:before {
-  content: "\e90c";
-}
-.icon-check-square:before {
-  content: "\e90e";
-}
-.icon-menu:before {
-  content: "\e5d2";
-}
-.icon-more_horiz:before {
-  content: "\e5d3";
-}
-.icon-reorder:before {
-  content: "\e8fe";
-}
-.icon-brand:before {
-  content: "\e900";
-  color: #999;
-}
-.icon-brand2:before {
-  content: "\e901";
-  color: #19a9e5;
-}
-.icon-brand3:before {
-  content: "\e902";
-  color: #3b5998;
-}
-.icon-brand4:before {
-  content: "\e903";
-}
-.icon-brand5:before {
-  content: "\e904";
-  color: #d14836;
-}
-.icon-brand6:before {
-  content: "\e905";
-  color: #4285f4;
-}
-.icon-brand7:before {
-  content: "\e906";
-  color: #0077b5;
-}
-.icon-brand8:before {
-  content: "\e907";
-  color: #0084ff;
-}
-.icon-brand9:before {
-  content: "\e908";
-  color: #00d8ff;
-}
-.icon-brand10:before {
-  content: "\e909";
-  color: #00aff0;
-}
-.icon-brand11:before {
-  content: "\e90a";
-  color: #56b68b;
-}
-.icon-brand12:before {
-  content: "\e90b";
-  color: #1da1f2;
-}
-
-.bc1 {
-  background-color: $bc1;
-}
-.bc2 {
-  background-color: $bc2;
-}
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .header-container-desktop {
     animation-name: header_slide;
-    animation-duration: .3s;
+    animation-duration: .4s;
     animation-fill-mode: both;
 
   display: none;
   .header-logo {
-
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -255,12 +120,12 @@ export default {
      }
     }
     .header-logo-title {
-      font-size: 1.2em;
+      text-decoration: none;
+      font-size: 1em;
       font-weight: 600;
       letter-spacing: -2px;
       color: #1a2328;
       text-transform: uppercase;
-      padding-left: .5em;
     }
   }
   .header-menu {
@@ -275,6 +140,7 @@ export default {
       font-weight: 700;
       color: #1a2328;
       text-transform: uppercase;
+      text-decoration: none;
       letter-spacing: -1px;
       &:hover {
         color: #02b875;
@@ -347,9 +213,12 @@ export default {
       height: 60px;
     }
     .header-logo-title {
-      font-size: 1.2em;
+      text-decoration: none;
+      font-size: .9em;
+      font-weight: 600;
       letter-spacing: -2px;
-      padding-left: .5em;
+      color: #1a2328;
+      text-transform: uppercase;
     }
   }
 }
@@ -380,10 +249,11 @@ export default {
       justify-content: space-around;
       .header-menu-item {
         cursor: pointer;
-        font-size: 1em;
+        font-size: .9em;
         font-weight: 900;
         color: #1a2328;
         text-transform: uppercase;
+        text-decoration: none;
         letter-spacing: -1px;
         &:hover {
           color: #02b875;
@@ -439,6 +309,8 @@ export default {
     }
   }
   .breakline {
+    margin-left: 0;
+    max-width: 100%;
     border: solid lightgray 1px;
   }
   .submenu-lower {
@@ -548,7 +420,7 @@ export default {
     }
     .howwework-button {
       padding: 1.2em 0;
-      max-width: 12em; 
+      max-width: 12em;
     }
   }
 }
@@ -590,7 +462,7 @@ export default {
     }
     .howwework-button {
       padding: 1.6em 0;
-      max-width: 16em; 
+      max-width: 16em;
     }
   }
 }

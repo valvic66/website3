@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <router-view/>
+    <div class="wrapper">
+      <nav-menu></nav-menu>
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
+import NavMenu from './components/NavMenu'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    NavMenu
+  }
 }
 </script>
 
@@ -22,4 +29,8 @@ export default {
 </style>
 
 <style scoped lang="scss">
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 </style>

@@ -1,14 +1,13 @@
 <template>
-  <div class="">
+  <div class=''>
 
   </div>
 </template>
 
-
 <script>
 export default {
-  name: "",
-  props: [""],
+  name: '',
+  props: [''],
   data() {
     return {
 
@@ -16,7 +15,6 @@ export default {
   }
 }
 </script>
-
 
 <style scoped>
 
