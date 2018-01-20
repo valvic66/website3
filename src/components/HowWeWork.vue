@@ -1,6 +1,6 @@
 <template>
   <div class='howwework'>
-    <div class="howwework-title">Correct steps to follow in <br />Frontend Development</div>
+    <div class="howwework-title">Correct steps for successful <br />Frontend Development</div>
     <div class="howwework-text">We will follow the above steps <b>carefully</b> in order to make sure that <b>your project will be perfect</b> to represent your bussines. </div>
     <div class="howwework-req">
       <div class="row">
@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div class="howwework-button">SEE OUR OFFERS</div>
+    <div class="howwework-button">SHOWCASE</div>
   </div>
 </template>
 
@@ -119,6 +119,11 @@ export default {
     letter-spacing: -1px;
     line-height: 1.4;
     }
+    .howwework-text {
+      font-size: 1em;
+      line-height: 1.4em;
+      letter-spacing: -1px;
+    }
     .howwework-req {
       margin: 1.2em 0;
       .req-item {
@@ -145,6 +150,11 @@ export default {
     letter-spacing: -1px;
     line-height: 1.4;
     }
+    .howwework-text {
+      font-size: 1.2em;
+      line-height: 1.6em;
+      letter-spacing: -1px;
+    }
     .howwework-req {
       margin: 1.8em 0;
       .req-item {
@@ -156,8 +166,8 @@ export default {
       }
     }
     .howwework-button {
-      padding: 1.4em 0;
-      max-width: 14em;
+      padding: 1.2em 0;
+      max-width: 12em;
     }
   }
 }

@@ -10,11 +10,9 @@
         </div>
 
       <div class="col-md-8 header-menu">
-        <router-link class="header-menu-item" to="/howwework"><div>HOW WE WORK</div></router-link>
-        <router-link class="header-menu-item" to="/whoweare"><div>WHO WE ARE</div></router-link>
-        <div class="header-menu-item">SHOW CASE</div>
-        <div class="header-menu-item">WHY US</div>
-        <div class="header-menu-item header-menu-item-btn">START A PROJECT</div>
+        <router-link class="header-menu-item" to="/whoweare"><div>WHO AM I</div></router-link>
+        <router-link class="header-menu-item" to="/howwework"><div>HOW DO I WORK</div></router-link>
+        <div class="header-menu-item header-menu-item-btn">SHOW CASE</div>
         <div class='header-menu-item-more icon-more_horiz' />
       </div>
     </div>
@@ -35,18 +33,17 @@
           <router-link class="header-menu-item" to="/howwework"><div @click='onHamburgerClick'>HOW WE WORK</div></router-link>
           <router-link class="header-menu-item" to="/whoweare"><div @click='onHamburgerClick'>WHO WE ARE</div></router-link>
           <div class="header-menu-item">SHOW CASE</div>
-          <div class="header-menu-item">WHY US</div>
           <div class="header-menu-item header-menu-item-btn">START A PROJECT</div>
         </div>
         <div class="submenu-right">
-          <div class="header-menu-item">Web Design</div>
-          <div class="header-menu-item">Website de Prezentare</div>
-          <div class="header-menu-item">Magazin Online</div>
-          <div class="header-menu-item">Promovare Online</div>
-          <div class="header-menu-item">Branding</div>
-          <div class="header-menu-item">Despre Noi</div>
-          <div class="header-menu-item">Contact</div>
-          <div class="header-menu-item">Cariera</div>
+          <div class="header-menu-item">STACK</div>
+          <div class="header-menu-item">HTML 5</div>
+          <div class="header-menu-item">CSS 3</div>
+          <div class="header-menu-item">REACT JS</div>
+          <div class="header-menu-item">Vue JS</div>
+          <div class="header-menu-item">WEBPACK</div>
+          <div class="header-menu-item">NPM</div>
+          <div class="header-menu-item">GIT</div>
         </div>
       </div>
 
