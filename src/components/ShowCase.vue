@@ -192,8 +192,8 @@ export default {
 @media screen and (min-width: 990px) {}
 
 @keyframes sample_slide {
-    from {transform: translateX(-1000px);}
-    to {transform: translateY(0);}
+	from {transform: translateX(-1000px);}
+	to {transform: translateY(0);}
 }
 </style>
 

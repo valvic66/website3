@@ -3,9 +3,9 @@
     <div class="header-container-desktop row">
         <div class="col-md-4 header-logo">
           <div class="header-logo-img">
-            <router-link to="/"><img @click='onHamburgerClick' src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt=""></router-link>
+            <router-link to="/"><img src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt=""></router-link>
           </div>
-          <router-link class="header-logo-title" to="/"><div @click='onHamburgerClick'>FRONTEND DEV</div></router-link>
+          <router-link class="header-logo-title" to="/"><div>FRONTEND DEV</div></router-link>
         </div>
 
       <div class="col-md-8 header-menu">
@@ -19,9 +19,9 @@
     <div v-bind:class='{isGrey: isHamburgerClicked}' class="header-container-mobile">
       <div class="header-logo">
         <div class="header-logo-img">
-          <router-link to="/"><img @click='onHamburgerClick' src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt=""></router-link>
+          <router-link to="/"><img @click="onLogoClick" src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt=""></router-link>
         </div>
-        <router-link class="header-logo-title" to="/"><div @click='onHamburgerClick'>FRONTEND DEV</div></router-link>
+        <router-link class="header-logo-title" to="/"><div @click="onLogoClick" >FRONTEND DEV</div></router-link>
       </div>
       <div @click='onHamburgerClick' class="header-sandwich icon-menu" />
     </div>
@@ -81,6 +81,9 @@ export default {
   methods: {
     onHamburgerClick: function () {
       this.isHamburgerClicked = !this.isHamburgerClicked
+    },
+    onLogoClick: function () {
+      this.isHamburgerClicked = false
     }
   }
 }
@@ -361,9 +364,6 @@ export default {
       padding: 1.2em 0;
       max-width: 12em;
     }
-    .submenu {
-      display: none;
-    }
   }
 }
 
@@ -383,7 +383,6 @@ export default {
   .submenu {
     display: none;
   }
-
   .howwework {
     .howwework-title {
     font-size: 2.3em;

@@ -127,9 +127,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 768px) {}
-
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 768px) {
   .who-we-are {
     .who-we-are__l-panel {
       .who-we-are__l-panel__title {
@@ -149,4 +147,6 @@ export default {
     }
   }
 }
+
+@media screen and (min-width: 990px) {}
 </style>
