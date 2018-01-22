@@ -26,6 +26,9 @@ export default {
 #app {
 
 }
+html {
+  overflow-y: scroll;
+}
 </style>
 
 <style scoped lang="scss">

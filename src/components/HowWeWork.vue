@@ -47,14 +47,16 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+@import '../styles/custom-bootstrap.scss';
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .howwework {
-  max-width: 100%;
-  margin: 1em;
+  width: 100%;
+  padding: 1em;
+  background-color: #f5f7fa;
   .howwework-title {
     // background-color: lightblue;
     font-family: 'Open Sans', sans-serif;
@@ -67,13 +69,16 @@ export default {
   }
   .howwework-text {
     transform: scaleY(.9);
-    line-height: 1.2em;
+    line-height: 1.4em;
     max-width: 45em;
+    letter-spacing: -1px;
+    font-size: 1.1em;
   }
   .howwework-req {
     margin: 1em 0;
     .req-item {
       font-size: 1.2em;
+      letter-spacing: -1px;
     }
     .req-icon {
       padding-right: .2em;
@@ -89,8 +94,8 @@ export default {
     font-weight: 700;
     color: #ffffff;
     text-align: center;
-    padding: 1em 0;
-    max-width: 12em;
+    padding: .8em 0;
+    max-width: 10em;
     margin-top: 2em;
     &:hover {
       color: white;
@@ -123,6 +128,7 @@ export default {
       font-size: 1em;
       line-height: 1.4em;
       letter-spacing: -1px;
+      font-size: 1.1em;
     }
     .howwework-req {
       margin: 1.2em 0;
@@ -135,8 +141,8 @@ export default {
       }
     }
     .howwework-button {
-      padding: 1.2em 0;
-      max-width: 12em;
+      padding: .8em 0;
+      max-width: 10em;
     }
   }
 }

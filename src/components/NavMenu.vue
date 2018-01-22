@@ -12,7 +12,7 @@
       <div class="col-md-8 header-menu">
         <router-link class="header-menu-item" to="/whoweare"><div>WHO AM I</div></router-link>
         <router-link class="header-menu-item" to="/howwework"><div>HOW DO I WORK</div></router-link>
-        <div class="header-menu-item header-menu-item-btn">SHOW CASE</div>
+        <router-link class="header-menu-item header-menu-item-btn" to="/showcase"><div>SHOW CASE</div></router-link>
         <div class='header-menu-item-more icon-more_horiz' />
       </div>
     </div>
@@ -30,13 +30,12 @@
     <div v-if='isHamburgerClicked' class="submenu">
       <div class="submenu-upper">
         <div class="submenu-left">
-          <router-link class="header-menu-item" to="/howwework"><div @click='onHamburgerClick'>HOW WE WORK</div></router-link>
-          <router-link class="header-menu-item" to="/whoweare"><div @click='onHamburgerClick'>WHO WE ARE</div></router-link>
-          <div class="header-menu-item">SHOW CASE</div>
-          <div class="header-menu-item header-menu-item-btn">START A PROJECT</div>
+          <router-link class="header-menu-item" to="/whoweare"><div @click='onHamburgerClick'>WHO AM I</div></router-link>
+          <router-link class="header-menu-item" to="/howwework"><div @click='onHamburgerClick'>HOW I WORK</div></router-link>
+          <router-link class="header-menu-item header-menu-item-btn" to="/showcase"><div @click='onHamburgerClick'>SHOW CASE</div></router-link>
         </div>
         <div class="submenu-right">
-          <div class="header-menu-item">STACK</div>
+          <div class="header-menu-item">My Stack</div>
           <div class="header-menu-item">HTML 5</div>
           <div class="header-menu-item">CSS 3</div>
           <div class="header-menu-item">REACT JS</div>
@@ -288,16 +287,19 @@ export default {
       text-align: right;
       padding-right: 1em;
       .header-menu-item {
-        cursor: pointer;
+        // cursor: pointer;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: .9em;
         font-weight: 350;
         color: #1a2328;
         &:hover {
-          color: #02b875;
+          // color: #02b875;
         }
         &:first-child {
-          margin-left: 0;
+          color: #02b875;
+          border: solid #02b875 2px;
+          border-radius: 8px;
+          text-align: center;
         }
         &:last-child {
           margin-right: 0;
@@ -336,65 +338,6 @@ export default {
       align-items: center;
     }
   }
-}
-
-.howwework {
-  max-width: 100%;
-  margin: 1em;
-  .howwework-title {
-    // background-color: lightblue;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.4em;
-    letter-spacing: -1px;
-    line-height: 1.4;
-    color: #1a2328;
-    max-width: 14em;
-    margin-bottom: 1em;
-  }
-  .howwework-text {
-    transform: scaleY(.9);
-    line-height: 1.2em;
-    max-width: 45em;
-  }
-  .howwework-req {
-    margin: 1em 0;
-    .req-item {
-      font-size: 1.2em;
-    }
-    .req-icon {
-      padding-right: .2em;
-      font-size: 1.2em;
-      color: #02b875;
-    }
-  }
-  .howwework-button {
-    // margin: 0 auto;
-    background-color: #02b875;
-    text-transform: uppercase;
-    font-size: 1.1em;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;
-    padding: 1em 0;
-    max-width: 12em;
-    margin-top: 2em;
-    &:hover {
-      color: white;
-      background-color: #1a2328;
-      cursor: pointer;
-      -webkit-transition: background-color .3s ease-in-out;
-      -moz-transition: background-color .3s ease-in-out;
-      -o-transition: background-color .3s ease-in-out;
-      transition: background-color .3s ease-in-out;
-    }
-  }
-}
-.isFlexCenter {
-  padding: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 @media screen and (min-width: 576px) {
