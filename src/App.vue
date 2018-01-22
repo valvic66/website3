@@ -24,7 +24,7 @@ export default {
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 #app {
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 html {
   overflow-y: scroll;
@@ -34,6 +34,9 @@ html {
 <style scoped lang="scss">
 .wrapper {
   max-width: 1200px;
+  height: 100vw;
   margin: 0 auto;
+  border-left: solid lightgrey 1px;
+  border-right: solid lightgrey 1px;
 }
 </style>

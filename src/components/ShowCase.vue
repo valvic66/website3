@@ -1,8 +1,8 @@
 <template>
   <div class="show-case">
-		<div class="show-case__title">Sample Work.</div>
+		<div class="show-case__title">Sample Work</div>
 		<div class="show-case__panel row">
-			<div class="show-case__panel__item col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 effect">
+			<div class="show-case__panel__item col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 				<div class="show-case__panel__item__img">
 					<a href='https://valvic66.github.io/website3/#/' target='_blank'><img src="https://cdn.rawgit.com/valvic66/website3/b50e9a33/src/assets/tinified/Presentation_Site.png" width="300" /></a>
 				</div>
@@ -101,11 +101,16 @@ export default {
 .show-case {
 	/* background-color: rgb(233, 233, 39); */
 	max-width: 100%;
-  	margin: 1em;
+	margin: 1em;
 }
 
 /* isFlexCol */
 .show-case__title {
+	animation-name: sample_slide;
+  animation-duration: .6s;
+  animation-fill-mode: both;
+	animation-delay: .3s;
+
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.4em;
 	letter-spacing: -1px;
@@ -137,13 +142,21 @@ export default {
 .show-case__panel__item__img {
 	cursor: pointer;
 	align-self: center;
-	box-shadow: 1px 1px 5px lightgrey;
+	// box-shadow: 1px 1px 5px lightgrey;
 	margin-bottom: 1em;
+	border:solid lightgrey 1px;
+}
+.show-case__panel__item__img:hover {
+	transition-duration: .3s;
+	transform: scale(1.1);
 }
 .show-case__panel__item__img img {
 	max-width: 100%;
-}
 
+}
+.show-case__panel__item__img img:hover {
+
+}
 .show-case__panel__item__descr {
 	display: flex;
 	flex-direction: column;
@@ -167,15 +180,20 @@ export default {
 	}
 }
 
-@media screen and (min-width: 768px) {}
-
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 768px) {
   .show-case__title {
 		font-size: 2.3em;
 	}
 	.show-case__panel__item__descr {
 		font-size: 1.1em;
 	}
+}
+
+@media screen and (min-width: 990px) {}
+
+@keyframes sample_slide {
+    from {transform: translateX(-1000px);}
+    to {transform: translateY(0);}
 }
 </style>
 

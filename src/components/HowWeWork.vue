@@ -1,7 +1,7 @@
 <template>
   <div class='howwework'>
     <div class="howwework-title">Correct steps for successful <br />Frontend Development</div>
-    <div class="howwework-text">We will follow the above steps <b>carefully</b> in order to make sure that <b>your project will be perfect</b> to represent your bussines. </div>
+    <div class="howwework-text">I will follow the above steps <b>carefully</b> in order to make sure that <b>your project will be perfect</b> to represent your bussines. </div>
     <div class="howwework-req">
       <div class="row">
         <div class="col-12 col-sm-6 col-md-4 col-lg-4 isFlexCenter">
@@ -56,7 +56,7 @@ export default {
 .howwework {
   width: 100%;
   padding: 1em;
-  background-color: #f5f7fa;
+  // background-color: #f5f7fa;
   .howwework-title {
     // background-color: lightblue;
     font-family: 'Open Sans', sans-serif;
@@ -148,9 +148,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 768px) {}
-
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 768px) {
   .howwework {
     .howwework-title {
     font-size: 2.3em;
@@ -165,7 +163,7 @@ export default {
     .howwework-req {
       margin: 1.8em 0;
       .req-item {
-        font-size: 1.6em;
+        font-size: 1.4em;
       }
       .req-icon {
         padding-right: .2em;
@@ -173,9 +171,11 @@ export default {
       }
     }
     .howwework-button {
-      padding: 1.2em 0;
-      max-width: 12em;
+      padding: .8em 0;
+      max-width: 10em;
     }
   }
 }
+
+@media screen and (min-width: 990px) {}
 </style>

@@ -90,15 +90,15 @@ export default {
 @import '../styles/custom-bootstrap.scss';
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .header-container-desktop {
-    animation-name: header_slide;
-    animation-duration: .4s;
-    animation-fill-mode: both;
+  animation-name: header_slide;
+  animation-duration: .4s;
+  animation-fill-mode: both;
 
   display: none;
   .header-logo {
@@ -361,12 +361,13 @@ export default {
       padding: 1.2em 0;
       max-width: 12em;
     }
+    .submenu {
+      display: none;
+    }
   }
 }
 
-@media screen and (min-width: 768px) {}
-
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 768px) {
   .header-container-desktop {
     padding-top: 2em;
     padding-bottom: 1em;
@@ -405,6 +406,8 @@ export default {
     }
   }
 }
+
+@media screen and (min-width: 990px) {}
 
 @keyframes header_slide {
     from {transform: translateY(-100px);}
