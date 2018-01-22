@@ -4,7 +4,7 @@
 		<div class="show-case__panel row">
 			<div class="show-case__panel__item col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 effect">
 				<div class="show-case__panel__item__img">
-					<img src="@/assets/tinified/Presentation_Site.png" width="300">
+					<img src="../assets/tinified/Presentation_Site.png" width="300">
 				</div>
 				<div class="show-case__panel__item__descr">
 					<p>Description: Presentation site. Created in Vue JS. Mobile responsive.</p>
@@ -14,7 +14,7 @@
 			</div>
 			<div class="show-case__panel__item col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 				<div class="show-case__panel__item__img">
-					<img src="@/assets/tinified/Website2.png" width="300">
+					<img src="../assets/tinified/Website2.png" width="300">
 				</div>
 				<div class="show-case__panel__item__descr">
 					<p>Description: Dynamic site. Created in React JS. Mobile responsive.</p>
@@ -24,7 +24,7 @@
 			</div>
 			<div class="show-case__panel__item col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 				<div class="show-case__panel__item__img">
-					<img src="@/assets/tinified/Website3.png" width="300">
+					<img src="../assets/tinified/Website3.png" width="300">
 				</div>
 				<div class="show-case__panel__item__descr">
 					<p>Description: Dynamic site. Created in React JS. Mobile responsive.</p>
@@ -34,7 +34,7 @@
 			</div>
 			<div class="show-case__panel__item col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 				<div class="show-case__panel__item__img">
-					<img src="@/assets/tinified/Shopping_Cart.png" width="300">
+					<img src="../assets/tinified/Shopping_Cart.png" width="300">
 				</div>
 				<div class="show-case__panel__item__descr">
 					<p>Description: Shopping Cart. Created in Vue JS. Mobile responsive.</p>
@@ -44,7 +44,7 @@
 			</div>
 			<div class="show-case__panel__item col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 				<div class="show-case__panel__item__img">
-					<img src="@/assets/tinified/Vue_Sample_Cards.png" width="300">
+					<img src="../assets/tinified/Vue_Sample_Cards.png" width="300">
 				</div>
 				<div class="show-case__panel__item__descr">
 					<p>Description: Vue JS Examples. Mobile responsive.</p>
@@ -54,7 +54,7 @@
 			</div>
 			<div class="show-case__panel__item col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 				<div class="show-case__panel__item__img">
-					<img src="@/assets/tinified/Conditional_Custom_Component.png" width="300">
+					<img src="../assets/tinified/Conditional_Custom_Component.png" width="300">
 				</div>
 				<div class="show-case__panel__item__descr">
 					<p>Description: React Conditional Custom Component.</p>
@@ -64,7 +64,7 @@
 			</div>
 			<div class="show-case__panel__item col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 				<div class="show-case__panel__item__img">
-					<img src="@/assets/tinified/DropDown_Custom_Component.png" width="300">
+					<img src="../assets/tinified/DropDown_Custom_Component.png" width="300">
 				</div>
 				<div class="show-case__panel__item__descr">
 					<p>Description: React Conditional Custom Component.</p>
