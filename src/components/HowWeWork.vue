@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div class="howwework-button">SHOWCASE</div>
+    <router-link class="howwework-button" to="/showcase"><div class="howwework-button">SHOW CASE</div></router-link>
   </div>
 </template>
 
@@ -90,6 +90,7 @@ export default {
     // margin: 0 auto;
     background-color: #02b875;
     text-transform: uppercase;
+    text-decoration: none;
     font-size: 1.1em;
     font-weight: 700;
     color: #ffffff;

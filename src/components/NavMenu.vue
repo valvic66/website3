@@ -1,28 +1,27 @@
 <template>
   <div class="header-container">
     <div class="header-container-desktop row">
-
         <div class="col-md-4 header-logo">
           <div class="header-logo-img">
-            <router-link to="/"><img src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt=""></router-link>
+            <router-link to="/"><img @click='onHamburgerClick' src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt=""></router-link>
           </div>
-          <router-link class="header-logo-title" to="/"><div>FRONTEND DEV</div></router-link>
+          <router-link class="header-logo-title" to="/"><div @click='onHamburgerClick'>FRONTEND DEV</div></router-link>
         </div>
 
       <div class="col-md-8 header-menu">
-        <router-link class="header-menu-item" to="/whoweare"><div>WHO AM I</div></router-link>
-        <router-link class="header-menu-item" to="/howwework"><div>HOW DO I WORK</div></router-link>
+        <router-link class="header-menu-item" to="/whoami"><div>WHO AM I</div></router-link>
+        <router-link class="header-menu-item" to="/howiwork"><div>HOW DO I WORK</div></router-link>
         <router-link class="header-menu-item header-menu-item-btn" to="/showcase"><div>SHOW CASE</div></router-link>
-        <div class='header-menu-item-more icon-more_horiz' />
+        <div class='header-menu-item-more' />
       </div>
     </div>
 
     <div v-bind:class='{isGrey: isHamburgerClicked}' class="header-container-mobile">
       <div class="header-logo">
         <div class="header-logo-img">
-          <router-link to="/"><img src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt=""></router-link>
+          <router-link to="/"><img @click='onHamburgerClick' src="https://fmexdirect.com/includes/img/technology-icons/html-css-js.png" alt=""></router-link>
         </div>
-        <router-link class="header-logo-title" to="/"><div>FRONTEND DEV</div></router-link>
+        <router-link class="header-logo-title" to="/"><div @click='onHamburgerClick'>FRONTEND DEV</div></router-link>
       </div>
       <div @click='onHamburgerClick' class="header-sandwich icon-menu" />
     </div>
@@ -30,8 +29,8 @@
     <div v-if='isHamburgerClicked' class="submenu">
       <div class="submenu-upper">
         <div class="submenu-left">
-          <router-link class="header-menu-item" to="/whoweare"><div @click='onHamburgerClick'>WHO AM I</div></router-link>
-          <router-link class="header-menu-item" to="/howwework"><div @click='onHamburgerClick'>HOW I WORK</div></router-link>
+          <router-link class="header-menu-item" to="/whoami"><div @click='onHamburgerClick'>WHO AM I</div></router-link>
+          <router-link class="header-menu-item" to="/howiwork"><div @click='onHamburgerClick'>HOW I WORK</div></router-link>
           <router-link class="header-menu-item header-menu-item-btn" to="/showcase"><div @click='onHamburgerClick'>SHOW CASE</div></router-link>
         </div>
         <div class="submenu-right">

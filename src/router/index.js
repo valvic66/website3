@@ -17,13 +17,13 @@ export default new Router({
       component: LandingPage
     },
     {
-      path: '/howwework',
-      name: 'HowWeWork',
+      path: '/howiwork',
+      name: 'HowIWork',
       component: HowWeWork
     },
     {
-      path: '/whoweare',
-      name: 'WhoWeAre',
+      path: '/whoami',
+      name: 'WhoAmI',
       component: WhoWeAre
     },
     {

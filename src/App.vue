@@ -24,7 +24,7 @@ export default {
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 #app {
-
+  overflow-y: scroll;
 }
 html {
   overflow-y: scroll;
