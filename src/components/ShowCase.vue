@@ -4,7 +4,7 @@
 		<div class="show-case__panel row">
 			<div class="show-case__panel__item col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 effect">
 				<div class="show-case__panel__item__img">
-					<img src="../assets/tinified/Presentation_Site.png" width="300">
+					<img src="https://cdn.rawgit.com/valvic66/website3/b50e9a33/src/assets/tinified/Presentation_Site.png" width="300">
 				</div>
 				<div class="show-case__panel__item__descr">
 					<p>Description: Presentation site. Created in Vue JS. Mobile responsive.</p>
